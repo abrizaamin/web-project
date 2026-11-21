@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up | __SITE__</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="auth-wrap">
+    <aside class="auth-side">
+      <p class="hand">welcome, maker or gifter</p>
+      <h2>Join the handmade community</h2>
+      <ul>
+        <li>Buyers: discover gifts from small shops</li>
+        <li>Sellers: open your shop in minutes</li>
+        <li>Let the Gift Planner pick for you</li>
+      </ul>
+    </aside>
+
+    <form id="signupForm" class="auth-card" novalidate>
+      <h2>Create your account</h2>
+      <p class="sub">Choose how you want to use the site.</p>
+
+      <div class="role-pick">
+        <div><input type="radio" name="role" id="roleBuyer" value="buyer" checked>
+          <label for="roleBuyer">Buyer<small>I want to shop</small></label></div>
+        <div><input type="radio" name="role" id="roleSeller" value="seller">
+          <label for="roleSeller">Seller<small>I make and sell</small></label></div>
+      </div>
+
+      <div class="field"><label for="name">Full name</label><input type="text" id="name" required></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" required></div>
+      <div class="field"><label for="password">Password (min 6 characters)</label><input type="password" id="password" minlength="6" required></div>
+      <div class="field"><label for="confirm">Confirm password</label><input type="password" id="confirm" required></div>
+
+      <button type="submit" class="btn-main">Create account</button>
+      <p class="divider">or</p>
+      <button type="button" class="btn-google" onclick="alert('Google sign-in will be added in Phase 2')">Continue with Google</button>
+      <p id="error" class="form-error" role="alert"></p>
+      <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+    </form>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

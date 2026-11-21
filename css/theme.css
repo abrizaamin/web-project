@@ -1,124 +1,233 @@
-/* Google Fonts: Playfair Display (Headings), Plus Jakarta Sans (Body), Caveat (Handwriting) */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap");
 
 :root {
-  /* Base Colors */
-  --cream: #FFF8F1;
-  --latte: #EBDACB;
+  /* Backgrounds */
+  --cream: #fff8f1;
+  --white: #ffffff;
+  --latte: #ebdacb;
 
-  /* Pink Palette */
-  --blush: #F9DDE3;
-  --rose: #D98A9B;
-  --rose-deep: #A94B63;
+  /* Pink */
+  --blush: #f9dde3;
+  --rose: #d98a9b;
+  --rose-deep: #a94b63;
 
-  /* Matcha Palette */
-  --matcha-soft: #E0E9D0;
-  --matcha: #A9BC8B;
-  --matcha-deep: #5E7345;
+  /* Matcha */
+  --matcha-soft: #e0e9d0;
+  --matcha: #a9bc8b;
+  --matcha-deep: #5e7345;
 
-  /* Maroon & Brown Palette */
-  --maroon: #6B2A3A;
-  --cocoa: #4A2C2A;
-  --cocoa-soft: #7A5A55;
+  /* Maroon / brown */
+  --maroon: #6b2a3a;
+  --cocoa: #4a2c2a;
+  --cocoa-soft: #7a5a55; /* secondary text */
 
-  /* Fonts */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-  --font-hand: 'Caveat', cursive;
+  /* Type */
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-script: "Caveat", cursive;
+  --font-body: "Nunito", system-ui, sans-serif;
+
+  /* Shape and space */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 10px 30px rgba(107, 42, 58, 0.1);
+  --space: 1rem;
+  --container: 1160px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background-color: var(--cream);
+  margin: 0;
+  background: var(--cream);
   color: var(--cocoa);
   font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-heading);
+img { max-width: 100%; display: block; }
+a { color: var(--rose-deep); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
   color: var(--maroon);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+h3 { font-size: 1.35rem; }
+
+.script { font-family: var(--font-script); font-weight: 700; color: var(--rose-deep); }
+.muted { color: var(--cocoa-soft); }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 1.25rem; }
+
+:focus-visible { outline: 3px solid var(--matcha-deep); outline-offset: 3px; }
+
+/* ---------- Announcement bar + navbar ---------- */
+.announcement {
+  background: var(--maroon);
+  color: var(--cream);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
 }
 
-/* Whimsy Stitched Card (Har product aur shop card ke liye) */
-.card-stitched {
-  background: #ffffff;
-  border: 2px dashed var(--rose);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(74, 44, 42, 0.06);
-  transition: transform 0.2s ease;
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--cream);
+  border-bottom: 2px dashed var(--blush);
 }
+.navbar .logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--maroon); text-decoration: none; }
+.navbar nav { display: flex; gap: 1.25rem; flex: 1; flex-wrap: wrap; }
+.navbar nav a { color: var(--cocoa); text-decoration: none; font-weight: 700; }
+.navbar nav a:hover { color: var(--rose-deep); }
 
-.card-stitched:hover {
-  transform: translateY(-4px);
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: var(--rose);
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 600;
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font: 800 1rem var(--font-body);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--rose); color: var(--cocoa); }
+.btn-primary:hover { background: #cf7a8d; }
+.btn-outline { background: transparent; border-color: var(--maroon); color: var(--maroon); }
+.btn-outline:hover { background: var(--maroon); color: var(--cream); }
+.btn-matcha { background: var(--matcha-deep); color: var(--white); }
+.btn-matcha:hover { background: #4e6139; }
+.btn-ai { background: var(--maroon); color: var(--cream); }
+.btn-ai:hover { background: var(--cocoa); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ---------- Badges and category chips ---------- */
+.badge {
   display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
 }
+.badge-gift  { background: var(--blush); color: var(--maroon); }
+.badge-stock { background: var(--matcha-soft); color: var(--matcha-deep); }
+.badge-made  { background: var(--latte); color: var(--cocoa); }
+.badge-low   { background: #f6d9c9; color: #8a3b1c; }
+.badge-solid { background: var(--maroon); color: var(--cream); }
 
-.btn-primary:hover {
-  background-color: var(--rose-deep);
-}
-
-.btn-matcha {
-  background-color: var(--matcha-deep);
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-ai {
-  background-color: var(--maroon);
-  color: var(--cream);
-  border: none;
-  padding: 10px 22px;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Badges */
-.badge-stock {
-  background-color: var(--matcha-soft);
-  color: var(--matcha-deep);
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* Form Inputs */
-input, select, textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1.5px solid var(--latte);
-  border-radius: 10px;
-  background-color: #ffffff;
+.chip {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
   color: var(--cocoa);
-  font-family: var(--font-body);
-  margin-bottom: 12px;
 }
+.chip-crochet  { background: var(--blush); }
+.chip-cakes    { background: var(--latte); }
+.chip-paint    { background: var(--matcha-soft); }
+.chip-jewel    { background: #f3e6ea; }
+.chip-candles  { background: #eef0d8; }
+.chip.active   { background: var(--maroon); color: var(--cream); }
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--rose);
+/* ---------- Product card (stitched border = handmade feel) ---------- */
+.product-card {
+  background: var(--white);
+  border: 2px dashed var(--rose);
+  border-radius: var(--radius-lg);
+  padding: 0.9rem;
+  box-shadow: var(--shadow-soft);
+  max-width: 340px;
+}
+.product-card .thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  background: var(--blush);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.product-card .thumb .badge { position: absolute; top: 0.75rem; left: 0.75rem; }
+.product-card h3 { margin: 0.9rem 0 0; }
+.product-card .shop { font-size: 0.9rem; color: var(--cocoa-soft); margin: 0.1rem 0 0.6rem; }
+.product-card .row { display: flex; justify-content: space-between; align-items: center; }
+.price { font-family: var(--font-display); font-size: 1.4rem; color: var(--rose-deep); }
+.rating { font-weight: 800; color: var(--matcha-deep); }
+
+/* ---------- Occasion tiles ---------- */
+.occasions { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+.occasion {
+  padding: 1.4rem 1rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--maroon);
+  text-decoration: none;
+}
+.occasion.pink  { background: var(--blush); }
+.occasion.green { background: var(--matcha-soft); }
+.occasion.brown { background: var(--latte); }
+
+/* ---------- Forms ---------- */
+.field { display: grid; gap: 0.35rem; margin-bottom: 1rem; }
+.field label { font-weight: 800; font-size: 0.9rem; color: var(--maroon); }
+.input, .select, .textarea {
+  font: 600 1rem var(--font-body);
+  color: var(--cocoa);
+  background: var(--white);
+  border: 2px solid var(--latte);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+.input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--rose); box-shadow: 0 0 0 4px var(--blush); }
+.textarea { min-height: 110px; resize: vertical; }
+.field-error { color: #a3302b; font-size: 0.85rem; font-weight: 700; }
+
+/* ---------- Generic card, alerts, order tracker ---------- */
+.card { background: var(--white); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-soft); }
+.alert { padding: 0.8rem 1rem; border-radius: var(--radius-sm); font-weight: 700; }
+.alert-success { background: var(--matcha-soft); color: var(--matcha-deep); }
+.alert-error   { background: #f6d9d6; color: #8a2b25; }
+.alert-info    { background: var(--blush); color: var(--maroon); }
+
+.tracker { display: flex; justify-content: space-between; list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.tracker li { flex: 1; text-align: center; font-size: 0.85rem; font-weight: 700; color: var(--cocoa-soft); position: relative; }
+.tracker li::before {
+  content: "";
+  display: block;
+  width: 22px; height: 22px;
+  margin: 0 auto 0.4rem;
+  border-radius: 50%;
+  background: var(--latte);
+  position: relative; z-index: 1;
+}
+.tracker li::after {
+  content: "";
+  position: absolute; top: 10px; left: -50%;
+  width: 100%; height: 3px;
+  background: var(--latte);
+}
+.tracker li:first-child::after { display: none; }
+.tracker li.done { color: var(--matcha-deep); }
+.tracker li.done::before, .tracker li.done::after { background: var(--matcha); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }

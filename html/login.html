@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in | __SITE__</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="auth-wrap">
+    <aside class="auth-side">
+      <p class="hand">good to see you again</p>
+      <h2>Your handmade picks are waiting</h2>
+      <ul>
+        <li>Check your cart and orders</li>
+        <li>Sellers: manage products and orders</li>
+      </ul>
+    </aside>
+
+    <form id="loginForm" class="auth-card" novalidate>
+      <h2>Log in</h2>
+      <p class="sub">Test login: buyer@test.com / 1234</p>
+
+      <div class="field"><label for="email">Email</label><input type="email" id="email" required></div>
+      <div class="field"><label for="password">Password</label><input type="password" id="password" required></div>
+
+      <button type="submit" class="btn-main">Log in</button>
+      <p class="divider">or</p>
+      <button type="button" class="btn-google" onclick="alert('Google sign-in will be added in Phase 2')">Continue with Google</button>
+      <p id="error" class="form-error" role="alert"></p>
+      <p class="switch"><a href="#" onclick="alert('Coming in Phase 2');return false;">Forgot password?</a><br>
+        New here? <a href="signup.html">Create an account</a></p>
+    </form>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
