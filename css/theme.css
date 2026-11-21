@@ -1,0 +1,124 @@
+/* Google Fonts: Playfair Display (Headings), Plus Jakarta Sans (Body), Caveat (Handwriting) */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* Base Colors */
+  --cream: #FFF8F1;
+  --latte: #EBDACB;
+
+  /* Pink Palette */
+  --blush: #F9DDE3;
+  --rose: #D98A9B;
+  --rose-deep: #A94B63;
+
+  /* Matcha Palette */
+  --matcha-soft: #E0E9D0;
+  --matcha: #A9BC8B;
+  --matcha-deep: #5E7345;
+
+  /* Maroon & Brown Palette */
+  --maroon: #6B2A3A;
+  --cocoa: #4A2C2A;
+  --cocoa-soft: #7A5A55;
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-hand: 'Caveat', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--maroon);
+}
+
+/* Whimsy Stitched Card (Har product aur shop card ke liye) */
+.card-stitched {
+  background: #ffffff;
+  border: 2px dashed var(--rose);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(74, 44, 42, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.card-stitched:hover {
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--rose);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--rose-deep);
+}
+
+.btn-matcha {
+  background-color: var(--matcha-deep);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ai {
+  background-color: var(--maroon);
+  color: var(--cream);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Badges */
+.badge-stock {
+  background-color: var(--matcha-soft);
+  color: var(--matcha-deep);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Form Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--latte);
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: var(--cocoa);
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+}
