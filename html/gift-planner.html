@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Planner | __SITE__</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/planner.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="planner-wrap">
+    <div class="planner-intro">
+      <p class="hand">can't decide what to gift?</p>
+      <h1>Let us build the basket</h1>
+      <p>Share your budget and a few ideas. We will pick handmade items from different shops and put them together for you.</p>
+    </div>
+
+    <form id="plannerForm" class="planner-card" novalidate>
+      <div class="planner-grid">
+        <div>
+          <label for="budget">Budget (PKR)</label>
+          <input type="number" id="budget" min="300" step="100" placeholder="e.g. 5000" required>
+        </div>
+        <div>
+          <label for="city">Delivery city</label>
+          <select id="city"></select>
+          <p class="hint">Cakes and baked items are delivered in Lahore only.</p>
+        </div>
+        <div>
+          <label for="occasion">Occasion</label>
+          <select id="occasion">
+            <option>Birthday</option><option>Anniversary</option><option>Eid</option><option>Wedding</option><option>Thank you</option>
+          </select>
+        </div>
+        <div>
+          <label for="recipient">Who is it for?</label>
+          <select id="recipient">
+            <option>Mother</option><option>Friend</option><option>Sister</option><option>Husband / Wife</option><option>Colleague</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="prefs">Ideas and preferences</label>
+          <textarea id="prefs" placeholder="She loves pink, vanilla scents and cute little things..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-plan">Plan my gift</button>
+      <p id="plannerError" class="planner-error" role="alert"></p>
+    </form>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/planner.js"></script>
+</body>
+</html>
