@@ -1,6 +1,6 @@
-/* common.js - navbar, footer, splash, helpers (Member 1) */
+/* common.js - navbar, footer, splash, back button, helpers (Member 1) */
 
-// Naam, tagline aur logo sirf yahan badlein. Poori site mein khud update hoga.
+// Naam, tagline aur logo sirf yahan badlein
 const SITE = {
   name: "Whimsy Potli",
   tagline: "handmade with love",
@@ -14,9 +14,9 @@ const PAGES = IN_HTML ? "" : "html/";
 const ROOT  = IN_HTML ? "../" : "";
 const LOGO_SRC = ROOT + SITE.logo;
 
-/* ---------- Splash screen (website khulte hi logo animation) ---------- */
+/* ---------- Splash screen ---------- */
 function showSplash() {
-  if (sessionStorage.getItem("splashShown")) return;   // har browser session mein sirf ek baar
+  if (sessionStorage.getItem("splashShown")) return;
   sessionStorage.setItem("splashShown", "1");
 
   const s = document.createElement("div");
@@ -36,10 +36,10 @@ function showSplash() {
     setTimeout(() => s.remove(), 700);
   };
   setTimeout(close, 2800);
-  s.addEventListener("click", close);   // click karke skip bhi kar sakte hain
+  s.addEventListener("click", close);
 }
 
-/* ---------- Browser tab ka chhota icon ---------- */
+/* ---------- Favicon ---------- */
 function setFavicon() {
   const link = document.createElement("link");
   link.rel = "icon";
@@ -82,7 +82,25 @@ function renderNavbar() {
   if (out) out.addEventListener("click", (e) => { e.preventDefault(); logout(); });
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Back button ---------- */
+// Default "Back to home". Alag chahiye to <body data-back="products.html" data-back-label="Back to shop">
+const BACK_DEFAULTS = {
+  "signup.html":       { href: "login.html",        label: "Back to login" },
+  "gift-results.html": { href: "gift-planner.html", label: "Back to planner" }
+};
+
+function renderBackButton() {
+  if (!IN_HTML) return;
+  const nav = document.getElementById("navbar");
+  if (!nav) return;
+  const file = window.location.pathname.split("/").pop();
+  const custom = BACK_DEFAULTS[file] || {};
+  const href  = document.body.dataset.back      || custom.href  || "../index.html";
+  const label = document.body.dataset.backLabel || custom.label || "Back to home";
+  nav.insertAdjacentHTML("afterend",
+    `<div class="back-bar"><a class="back-btn" href="${href}"><span aria-hidden="true">&larr;</span> ${label}</a></div>`);
+}
+
 function renderFooter() {
   const el = document.getElementById("footer");
   if (!el) return;
@@ -119,5 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setFavicon();
   document.title = document.title.replace("__SITE__", SITE.name);
   renderNavbar();
+  renderBackButton();
   renderFooter();
 });

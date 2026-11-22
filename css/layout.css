@@ -137,6 +137,17 @@ a { color: var(--k-rose-deep); }
   font-family: var(--f-hand); font-size: 1.7rem; color: var(--k-rose-deep);
   animation: fadeUp .8s 1.1s both;
 }
+
+/* ---------- Back button ---------- */
+.back-bar { max-width: 1100px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px; border-radius: 999px;
+  border: 2px dashed var(--k-rose); background: var(--k-cream);
+  color: var(--k-maroon); font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.back-btn:hover { background: var(--k-blush); transform: translateX(-3px); }
 @keyframes logoIn { from { opacity: 0; transform: scale(.5) rotate(-8deg); } to { opacity: 1; transform: none; } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 body.no-scroll { overflow: hidden; }
