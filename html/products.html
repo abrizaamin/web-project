@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | __SITE__</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="catalog-shell">
+    <header class="catalog-banner">
+      <div class="banner-left" aria-hidden="true"></div>
+
+      <div class="banner-center">
+        <h1>Handmade Treasures</h1>
+        <span class="catalog-kicker">Small-Batch Pakistani Makers</span>
+      </div>
+
+      <div class="banner-right">
+        <p id="productsCountText" class="catalog-count">Loading products...</p>
+      </div>
+    </header>
+
+    <nav id="quickCategoryPills" class="quick-pills" aria-label="Quick category filter"></nav>
+
+    <div class="catalog-layout">
+      <aside class="filter-sidebar" aria-label="Filter and sort products">
+        <div class="sidebar-top">
+          <h2>Refine Search</h2>
+          <button type="button" id="resetFiltersBtn" class="btn-reset-link">Reset all</button>
+        </div>
+
+        <div class="field-block">
+          <label for="productSearchInput">Keyword or Tag</label>
+          <input
+            type="search"
+            id="productSearchInput"
+            placeholder="Sunflower, candle, cake..."
+          >
+        </div>
+
+        <div class="field-block">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+
+        <div class="field-block">
+          <label>Price Range (PKR)</label>
+          <div class="price-pair">
+            <input type="number" id="minPriceFilter" min="0" step="50" placeholder="Min">
+            <span class="price-dash">–</span>
+            <input type="number" id="maxPriceFilter" min="0" step="50" placeholder="Max">
+          </div>
+        </div>
+
+        <div class="field-block">
+          <label for="cityFilter">Deliverable City</label>
+          <select id="cityFilter">
+            <option value="">Any City</option>
+          </select>
+        </div>
+
+        <div class="field-block">
+          <label for="sortSelect">Sort By</label>
+          <select id="sortSelect">
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </aside>
+
+      <section id="productsGrid" class="catalog-grid" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/member2-helpers.js"></script>
+
+</body>
+</html>

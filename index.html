@@ -3,40 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>__SITE__ | Handmade with love</title>
+  <title>Home | _SITE_</title>
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
   <div id="navbar"></div>
 
-  <!-- Member 2 isi hero ko replace/improve kar sakta hai -->
-  <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <p class="hand">crochet, candles, cakes &amp; more</p>
-          <h1>Little shops, made by hand.</h1>
-          <p class="lead">Find handmade gifts from small Pakistani sellers, or tell our Gift Planner your budget and let it build a basket for you.</p>
-          <div class="hero-actions">
-             <a class="btn-link rose" href="html/products.html">Browse handmade</a>
-             <a class="btn-link matcha" href="html/gift-planner.html">Plan a gift</a>
-             <a class="btn-link ghost" href="html/signup.html">Open your shop</a>
-          </div>
+  <main class="home-page">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <span class="hero-handwriting">Handcrafted across Pakistan ✨</span>
+        <h1>Handmade with Heart, Delivered with Care</h1>
+        <p class="hero-lead">
+          Discover small-batch crochet bouquets, poured candles, custom Lahore cakes, paintings, pipe-cleaner blooms, and curated gift baskets.
+        </p>
+
+        <div class="hero-actions">
+          <a href="html/products.html" class="p2-hero-btn-primary">Explore All Products</a>
+          <a href="html/gift-planner.html" class="p2-hero-btn-secondary">✨ Try AI Gift Planner</a>
         </div>
-        <div class="hero-stitch">Stitched with care, delivered to your door</div>
+
+        <div class="hero-highlights">
+          <span class="hero-pill">🧶 100% Handmade</span>
+          <span class="hero-pill">🎁 Custom Gift Baskets</span>
+          <span class="hero-pill">🚚 Local City Delivery</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="potli-collage">
+          <a href="html/products.html?category=crochet" class="collage-tile tile-rose">
+            <span class="tile-emoji">🧶</span>
+            <strong>Crochet</strong>
+            <small>Everlasting blooms</small>
+          </a>
+          <a href="html/products.html?category=candles" class="collage-tile tile-matcha">
+            <span class="tile-emoji">🕯️</span>
+            <strong>Scented Candles</strong>
+            <small>Cozy hand-poured</small>
+          </a>
+          <a href="html/products.html?category=cakes" class="collage-tile tile-cream">
+            <span class="tile-emoji">🎂</span>
+            <strong>Cakes</strong>
+            <small>Fresh in Lahore</small>
+          </a>
+          <a href="html/products.html?category=paintings" class="collage-tile tile-blush">
+            <span class="tile-emoji">🎨</span>
+            <strong>Paintings</strong>
+            <small>Original mini art</small>
+          </a>
+        </div>
       </div>
     </section>
 
-    <div class="chips">
-      <a class="chip" href="#">Crochet</a><a class="chip" href="#">Candles</a><a class="chip" href="#">Cakes</a>
-      <a class="chip" href="#">Paintings</a><a class="chip" href="#">Pipe cleaners</a><a class="chip" href="#">Gift baskets</a>
-    </div>
+    <section class="home-section">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-kicker">Browse by Craft</span>
+          <h2>Shop by Category</h2>
+        </div>
+        <a href="html/products.html" class="section-link">View full catalog →</a>
+      </div>
+      <div id="homeCategoryChips" class="category-chips-grid"></div>
+    </section>
+
+    <section class="home-section">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-kicker">Meet the Artisans</span>
+          <h2>Featured Shops</h2>
+        </div>
+        <a href="html/products.html" class="section-link">Explore all →</a>
+      </div>
+      <div id="homeFeaturedShops" class="featured-shops-grid"></div>
+    </section>
+
+    <section class="home-section">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-kicker">Curated Picks</span>
+          <h2>Featured Products</h2>
+        </div>
+        <a href="html/products.html" class="section-link">See all treasures →</a>
+      </div>
+      <div id="homeFeaturedProducts" class="featured-products-grid"></div>
+    </section>
   </main>
 
   <div id="footer"></div>
 
   <script src="js/data.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/member2-helpers.js"></script>
 </body>
 </html>
