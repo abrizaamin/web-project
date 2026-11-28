@@ -254,3 +254,349 @@
     width: 100%;
   }
 }
+.detail-top-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.detail-top-badges .detail-kicker {
+  margin-bottom: 0;
+}
+
+.subcat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.24rem 0.75rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  background-color: rgba(255, 228, 236, 0.45);
+  color: var(--maroon);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.swatch-block {
+  margin-bottom: 1rem;
+}
+
+.swatch-heading {
+  font-size: 0.9rem;
+  color: var(--maroon);
+  margin-bottom: 0.45rem;
+}
+
+.swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.swatch-pill {
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  background-color: #fff;
+  color: var(--maroon);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.swatch-pill.is-selected {
+  background-color: var(--rose);
+  border-style: solid;
+  color: #fff;
+}
+
+.custom-notes-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.25rem;
+}
+
+.field-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field-inline label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--maroon);
+}
+
+.field-inline input,
+.field-inline textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.58rem 0.75rem;
+  border: 1.5px dashed var(--maroon);
+  border-radius: 12px;
+  background-color: #fff;
+  color: var(--maroon);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.purchase-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px dashed var(--maroon);
+  border-radius: 999px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.qty-stepper button {
+  width: 38px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  color: var(--maroon);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.qty-stepper button:hover {
+  background-color: rgba(255, 228, 236, 0.45);
+}
+
+.qty-stepper span {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--maroon);
+}
+
+.detail-tabs-wrap {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1.5px dashed var(--maroon);
+}
+
+.detail-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.detail-tab {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  background-color: #fff;
+  color: var(--maroon);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.detail-tab.is-active {
+  background-color: var(--maroon);
+  border-style: solid;
+  color: #fff;
+}
+
+.detail-tab-panel {
+  display: none;
+}
+
+.detail-tab-panel.is-active {
+  display: block;
+}
+
+.info-panel-card {
+  border: 1.5px dashed var(--maroon);
+  border-radius: 14px;
+  padding: 0.95rem 1.05rem;
+  background-color: rgba(255, 228, 236, 0.22);
+  color: var(--maroon);
+  font-size: 0.92rem;
+}
+
+.info-panel-card p {
+  margin: 0 0 0.45rem;
+  line-height: 1.55;
+}
+
+.info-panel-card p:last-child {
+  margin-bottom: 0;
+}
+
+.detail-specs-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.detail-spec-row {
+  border: 1.5px dashed var(--maroon);
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.detail-spec-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.detail-spec-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--maroon);
+}
+
+.seller-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.seller-link-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  background-color: #fff;
+  color: var(--maroon);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.seller-panel-cta {
+  margin-top: 0.8rem;
+}
+
+.visit-shop-link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+}
+
+.sold-by-card {
+  margin-top: 1.35rem;
+  border: 1.5px dashed var(--maroon);
+  border-radius: 16px;
+  padding: 1.05rem 1.15rem;
+  background: linear-gradient(135deg, #fff 0%, rgba(226, 240, 217, 0.35) 100%);
+}
+
+.sold-by-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+.sold-by-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 228, 236, 0.55);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sold-by-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sold-by-kicker {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.sold-by-name {
+  margin: 0.05rem 0;
+  font-size: 1.1rem;
+  color: var(--maroon);
+}
+
+.sold-by-city {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--matcha-deep);
+}
+
+.sold-by-bio {
+  margin: 0 0 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--maroon);
+}
+
+.sold-by-links {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 0.75rem;
+}
+
+.sold-by-links a {
+  color: var(--maroon);
+}
+
+.sold-by-btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.52rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.muted-small {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  color: var(--maroon);
+}
+
+@media (max-width: 600px) {
+  .detail-specs-list {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-row .add-cart-btn {
+    width: auto;
+    flex: 1;
+  }
+}

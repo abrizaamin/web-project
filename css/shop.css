@@ -1,145 +1,159 @@
 .shop-shell {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1.75rem 1.25rem 3.5rem;
 }
 
-.back-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.9rem;
-  border: 1.5px dashed var(--maroon);
-  border-radius: 999px;
-  background-color: #fff;
-  color: var(--maroon);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-decoration: none;
-  margin-bottom: 1.25rem;
-}
-
 .shop-hero-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   border: 2px dashed var(--maroon);
   border-radius: 22px;
-  overflow: hidden;
-  background-color: #fff;
+  padding: 1.75rem;
   margin-bottom: 2.25rem;
-  box-shadow: 0 10px 26px rgba(92, 34, 48, 0.05);
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 228, 236, 0.45) 55%, rgba(226, 240, 217, 0.45) 100%);
 }
 
-.shop-banner-box {
-  width: 100%;
-  height: 220px;
-  border-bottom: 1.5px dashed var(--maroon);
+.shop-avatar-wrap {
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 228, 236, 0.6), rgba(226, 240, 217, 0.6));
-  color: var(--maroon);
-  font-size: 1.5rem;
-  font-weight: 800;
+  background-color: #fff;
+  font-size: 2.2rem;
+  flex-shrink: 0;
 }
 
-.shop-banner-box img {
+.shop-avatar-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.shop-profile-body {
-  padding: 1.6rem 1.75rem;
+.shop-kicker {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--rose);
+  margin-bottom: 0.2rem;
 }
 
-.shop-identity {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.9rem;
-}
-
-.shop-avatar {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px dashed var(--maroon);
-  flex-shrink: 0;
-}
-
-.shop-identity h1 {
-  margin: 0 0 0.2rem;
+.shop-hero-body h1 {
+  margin: 0 0 0.25rem;
   color: var(--maroon);
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
 }
 
-.shop-city-pill {
-  display: inline-block;
-  font-size: 0.85rem;
+.shop-city-tag {
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--matcha-deep);
+  margin-bottom: 0.55rem;
 }
 
-.shop-about-text {
-  margin: 0 0 1.25rem;
-  max-width: 720px;
-  line-height: 1.65;
+.shop-bio {
+  margin: 0 0 0.75rem;
   color: var(--maroon);
+  line-height: 1.55;
+  max-width: 640px;
 }
 
-.delivery-section h2 {
-  margin: 0 0 0.6rem;
-  font-size: 1.05rem;
-  color: var(--maroon);
-}
-
-.delivery-chips {
+.shop-links-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 0.5rem;
 }
 
-.delivery-chip {
-  padding: 0.38rem 0.85rem;
-  border: 1.5px dashed var(--maroon);
+.shop-social-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.8rem;
   border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
+  background-color: #fff;
+  color: var(--maroon);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shop-category-section {
+  margin-bottom: 2.5rem;
+  border: 1.5px dashed var(--maroon);
+  border-radius: 20px;
+  padding: 1.4rem;
+  background-color: #fff;
+}
+
+.shop-cat-header h2 {
+  margin: 0 0 0.75rem;
+  color: var(--maroon);
+}
+
+.shop-subchips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.shop-subchip {
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--maroon);
   background-color: rgba(255, 228, 236, 0.3);
   color: var(--maroon);
-  font-size: 0.88rem;
+  font-family: inherit;
+  font-size: 0.85rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.shop-catalog-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 1.15rem;
+.shop-subchip.is-active {
+  background-color: var(--rose);
+  border-style: solid;
+  color: #fff;
 }
 
-.shop-catalog-head h2 {
-  margin: 0;
+.shop-subcat-block {
+  margin-bottom: 1.35rem;
+}
+
+.shop-subcat-block:last-child {
+  margin-bottom: 0;
+}
+
+.shop-subcat-heading {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
   color: var(--maroon);
+  border-bottom: 1px dashed rgba(92, 34, 48, 0.25);
+  padding-bottom: 0.35rem;
 }
 
 .shop-products-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.1rem;
 }
 
 .product-card {
   border: 1.5px dashed var(--maroon);
   border-radius: 16px;
-  padding: 0.9rem;
+  padding: 0.85rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
 .shop-prod-link {
@@ -147,33 +161,39 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.4rem;
 }
 
-.shop-prod-img {
+.shop-prod-thumb {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 1px dashed var(--maroon);
   border-radius: 12px;
+  border: 1px dashed var(--maroon);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(226, 240, 217, 0.3);
-  font-size: 2.5rem;
+  background-color: rgba(255, 228, 236, 0.25);
+  font-size: 2.3rem;
 }
 
-.shop-prod-img img {
+.shop-prod-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.shop-prod-title {
+.shop-prod-link h3 {
   margin: 0;
   font-size: 1rem;
   color: var(--maroon);
+}
+
+.shop-prod-sub {
+  font-size: 0.8rem;
+  color: var(--maroon);
+  opacity: 0.82;
 }
 
 .shop-prod-price {
@@ -181,18 +201,18 @@
   color: var(--matcha-deep);
 }
 
-.product-card .btn-primary {
+.shop-view-btn {
   display: block;
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-  padding: 0.58rem 0.9rem;
+  padding: 0.55rem 0.85rem;
 }
 
-.not-found-box {
+.shop-empty-box {
   border: 2px dashed var(--maroon);
   border-radius: 18px;
-  padding: 2.25rem 1.5rem;
+  padding: 2rem 1.25rem;
   text-align: center;
   background-color: #fff;
   color: var(--maroon);
@@ -205,16 +225,10 @@
 }
 
 @media (max-width: 600px) {
-  .shop-shell {
-    padding: 1.25rem 0.9rem 2.5rem;
-  }
-
-  .shop-banner-box {
-    height: 155px;
-  }
-
-  .shop-profile-body {
-    padding: 1.15rem;
+  .shop-hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
   }
 
   .shop-products-grid {

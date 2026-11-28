@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | __SITE__</title>
+  <title>Featured Products | __SITE__</title>
   <link rel="stylesheet" href="../css/theme.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/products.css">
@@ -16,59 +16,64 @@
       <div class="banner-left" aria-hidden="true"></div>
 
       <div class="banner-center">
-        <h1>Handmade Treasures</h1>
-        <span class="catalog-kicker">Small-Batch Pakistani Makers</span>
+        <h1>Featured Products</h1>
+        <span class="catalog-kicker">All Handmade Treasures</span>
       </div>
 
       <div class="banner-right">
-        <p id="productsCountText" class="catalog-count">Loading products...</p>
+        <p id="featuredProductsCount" class="catalog-count">Loading products...</p>
       </div>
     </header>
 
-    <nav id="quickCategoryPills" class="quick-pills" aria-label="Quick category filter"></nav>
-
     <div class="catalog-layout">
-      <aside class="filter-sidebar" aria-label="Filter and sort products">
+      <aside id="featuredFilterSidebar" class="filter-sidebar" aria-label="Filter and sort featured products">
         <div class="sidebar-top">
           <h2>Refine Search</h2>
-          <button type="button" id="resetFiltersBtn" class="btn-reset-link">Reset all</button>
+          <button type="button" id="fpResetBtn" class="btn-reset-link">Reset all</button>
         </div>
 
         <div class="field-block">
-          <label for="productSearchInput">Keyword or Tag</label>
+          <label for="fpKeywordInput">Keyword or Tag</label>
           <input
             type="search"
-            id="productSearchInput"
+            id="fpKeywordInput"
             placeholder="Sunflower, candle, cake..."
           >
         </div>
 
         <div class="field-block">
-          <label for="categoryFilter">Category</label>
-          <select id="categoryFilter">
+          <label for="fpCategorySelect">Category</label>
+          <select id="fpCategorySelect">
             <option value="">All Categories</option>
+          </select>
+        </div>
+
+        <div class="field-block">
+          <label for="fpSubcategorySelect">Subcategory</label>
+          <select id="fpSubcategorySelect">
+            <option value="">All Subcategories</option>
           </select>
         </div>
 
         <div class="field-block">
           <label>Price Range (PKR)</label>
           <div class="price-pair">
-            <input type="number" id="minPriceFilter" min="0" step="50" placeholder="Min">
+            <input type="number" id="fpMinPrice" min="0" step="50" placeholder="Min">
             <span class="price-dash">–</span>
-            <input type="number" id="maxPriceFilter" min="0" step="50" placeholder="Max">
+            <input type="number" id="fpMaxPrice" min="0" step="50" placeholder="Max">
           </div>
         </div>
 
         <div class="field-block">
-          <label for="cityFilter">Deliverable City</label>
-          <select id="cityFilter">
+          <label for="fpCitySelect">Deliverable City</label>
+          <select id="fpCitySelect">
             <option value="">Any City</option>
           </select>
         </div>
 
         <div class="field-block">
-          <label for="sortSelect">Sort By</label>
-          <select id="sortSelect">
+          <label for="fpSortSelect">Sort By</label>
+          <select id="fpSortSelect">
             <option value="newest">Newest</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>
@@ -76,16 +81,16 @@
         </div>
       </aside>
 
-      <section id="productsGrid" class="catalog-grid" aria-live="polite"></section>
+      <section id="featuredProductsGrid" class="catalog-grid" aria-live="polite"></section>
     </div>
   </main>
 
   <div id="footer"></div>
 
   <script src="../js/data.js"></script>
+  <script src="../js/catalog.js"></script>
   <script src="../js/common.js"></script>
-  <script src="../js/products.js"></script>
+  <script src="../js/featured-products.js"></script>
   <script src="../js/member2-helpers.js"></script>
-
 </body>
 </html>
